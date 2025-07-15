@@ -1,7 +1,5 @@
-import { parseDateRange } from "../utils/date.js";
-
 export function validateMetricParams(req, res, next) {
-  const { unit, type, start_date, end_date } = req.query;
+  const { unit, type } = req.query;
 
   if (!["distance", "temperature"].includes(type)) {
     return res.status(400).json({ error: "Invalid type" });
@@ -20,8 +18,6 @@ export function validateMetricParams(req, res, next) {
   ) {
     return res.status(400).json({ error: "Invalid unit for temperature" });
   }
-
-  parseDateRange(start_date, end_date);
 
   next();
 }

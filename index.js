@@ -5,6 +5,7 @@ import bodyParser from "body-parser";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import metricRoutes from "./src/routes/metric.route.js";
+import { InternalServerError } from "./src/core/error.response.js";
 
 const { json } = bodyParser;
 
