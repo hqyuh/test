@@ -1,4 +1,4 @@
-# Everfit Test Project
+# Test Project
 
 ## Introduction
 
@@ -13,7 +13,7 @@ This is a Node.js REST API project that allows you to:
 1. Clone the repository:
    ```bash
    git clone <repo-url>
-   cd everfit-test
+   cd test
    ```
 2. Install dependencies:
    ```bash
