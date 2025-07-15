@@ -1,4 +1,4 @@
-# Everfit Test Project
+# Test Project
 
 ## Introduction
 
