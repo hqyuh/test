@@ -1,0 +1,30 @@
+set header userId = 1
+
+POST new metric 
+	body:
+		date (datetime or created_at in db for get latest date) => date
+		value
+		type=distance or temperature
+		unit=distance(Meter, centimeter, inch, feet, yard) or temperature (°C, °F, °K)
+validate body (optinal)
+=> 0.5h
+
+GET metrics
+	with params:
+		type=distance or temperature
+		unit=distance(Meter, centimeter, inch, feet, yard) or temperature (°C, °F, °K)
+		start_date=2025-06-15
+		end_date=2025-07-15
+
+1 months have 30 days
+if 1 day will have many records, get latest record in db base on created_at
+if params start_date=2025-06-15 end_date=2025-07-15 => 1 month
+		  start_date=2025-04-15 end_date=2025-06-15 => 2 months
+=> 3h
+
+Framework ExpressJS
+Database: Sqllife
+
+Estimate: 3.5
+Start: 7h30
+End:  11h
